@@ -15,8 +15,13 @@
         <strong>Date of Arrival</strong>: {{ $train->date_arrival }} <br>
         <strong>Train Code</strong>: {{ $train->code }} <br>
         <strong>Number of Carriage</strong>: {{ $train->number_of_carriage }} <br>
-        <strong>Running on time</strong>: {{ $train->running_on_time }} <br>
-        <strong>Cancelled</strong>: {{ $train->cancelled }} 
+        @if (($train->running_on_time) === 1)
+        <strong>The train is running on time</strong> <br>
+        @endif
+        @if (($train->cancelled) === 1)
+        <strong>The train is Cancelled</strong>
+        @endif
+        
       </p>
       <hr>
     @empty
