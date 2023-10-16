@@ -19,7 +19,7 @@
         <strong>The train is running on time</strong> <br>
         @endif
         @if (($train->cancelled) === 1)
-        <strong>The train is Cancelled</strong>
+        <strong class="text-uppercase">The train is Cancelled</strong>
         @endif
         
       </p>
