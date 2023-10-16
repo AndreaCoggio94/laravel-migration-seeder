@@ -12,7 +12,7 @@
             aria-current="page">Home<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Route::currentRouteName() == 'train.index' ? 'active' : '' }}" href="{{ route('train.index') }}">Train<span class="visually-hidden">(current)</span></a>
+          <a class="nav-link {{ Route::currentRouteName() == 'train.departure' ? 'active' : '' }}" href="{{ route('train.departure') }}">Train<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"

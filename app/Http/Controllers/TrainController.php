@@ -15,4 +15,15 @@ class TrainController extends Controller
         
         return view('train' , compact('title', 'trains'));
     }
+    
+    public function departure() {
+        
+        $title = "Train results";
+        
+        $trains = Train::all()->where('date_departure', '2023-10-16');
+        
+       
+        
+        return view('train' , compact('title', 'trains'));
+    }
 }
