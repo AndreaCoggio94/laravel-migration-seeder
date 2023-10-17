@@ -19,8 +19,9 @@ class TrainController extends Controller
     public function departure() {
         
         $title = "Train results";
+        $today = date("Y-m-d");
         
-        $trains = Train::all()->where('date_departure', '2023-10-16');
+        $trains = Train::all()->where('date_departure', $today);
         
        
         
