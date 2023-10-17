@@ -27,18 +27,18 @@ class TrainsTableSeeder extends Seeder
         $train->station_from = $faker->word();
         $train->station_to = $faker->word();
         // time
-        $train->departure = $faker->word();
-        $train->arrival = $faker->word();
+        $train->departure = $faker->time();
+        $train->arrival = $faker->time();
         // alphanumeric
-        $train->code = $faker->word();
+        $train->code = $faker->isbn10();
         // small int
-        $train->number_of_carriage = $faker->word();
+        $train->number_of_carriage = $faker->numberBetween(4,12);
         // boolean
-        $train->running_on_time = $faker->word();
-        $train->cancelled = $faker->word();
+        $train->running_on_time = $faker->randomElement([0,1]);
+        $train->cancelled = $faker->randomElement([0,1]);
         // date
-        $train->date_departure = $faker->word();
-        $train->date_arrival = $faker->word();
+        $train->date_departure = $faker->dateTimeThisMonth('+3 days');
+        $train->date_arrival = $faker->dateTimeThisMonth('+4 days');
 
         // examples
 
